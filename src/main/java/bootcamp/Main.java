@@ -70,7 +70,7 @@ public class Main
             String dni = scanner.nextLine();
 
             List<Cliente> clientesConDniPedido = clientes.stream().filter(c -> Objects.equals(c.getDni(), dni)).toList();
-            String mensaje = clientesConDniPedido.isEmpty() ? "No se encuentra un usuario con el DNI indicado" : clientesConDniPedido.toString();
+            String mensaje = clientesConDniPedido.isEmpty() ? "No se encuentra un usuario con el DNI indicado" : clientesConDniPedido.get(0).toString();
             System.out.println(mensaje);
 
             System.out.println("Desea continuar? (si/no): ");
